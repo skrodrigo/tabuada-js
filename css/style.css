@@ -1,0 +1,57 @@
+body {
+  font-family: "Maria", sans-serif;
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
+  background-color: #022019;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0 auto;
+}
+
+main > div {
+  width: 426px;
+  text-align: center;
+}
+
+.rc-display {
+  background-color: #fff;
+  padding: 100px;
+  color: black
+}
+
+.rc-numbers,
+.rc-operations {
+  display: flex;
+  gap: 2px;
+  margin-top: 5px;
+}
+
+.rc-numbers > div {
+  padding: 10px 15px;
+  font-size: 18px;
+  background-color: #f1f5f6;
+  cursor: pointer;
+  color: #202b38;
+}
+
+.rc-operations > div {
+  padding: 10px 15px;
+  font-size: 18px;
+  background-color: #f7f8f1;
+  color: #202b38;
+  cursor: pointer;
+}
+
+#equalsBtn {
+  background-color: greenyellow;
+}
+
+#clear {
+  flex: 1;
+}
