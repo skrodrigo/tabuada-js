@@ -15,16 +15,13 @@ operations.forEach((op) => {
   op.addEventListener("click", () => {
     let tabuada = ""; // Variável para armazenar todos os cálculos
     for (let i = 1; i < 11; i++) {
-      var calc = i + " " + op.textContent + " " + display.textContent + " = " + eval(display.textContent + op.textContent + i);
+      var calc = display.textContent + " " + op.textContent + " " + i + 
+      " = " + eval(i + op.textContent + display.textContent);
       tabuada += calc + "<br>"; // Adiciona cada cálculo à variável com quebra de linha em HTML
     }
     display.innerHTML = tabuada; // Atualiza o display com todos os cálculos
   });
 });
-
-
-
-
 
 document.getElementById("clear")
     .addEventListener('click', () => {

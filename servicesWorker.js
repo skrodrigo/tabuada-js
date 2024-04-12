@@ -4,7 +4,8 @@ const assetsToCache = [
     '/css/style.css',
     '/js/index.js',
     '/js/querySelector.js',
-    '/manifest.json'
+    '/manifest.json',
+    '/assets'
 ];
 
 
