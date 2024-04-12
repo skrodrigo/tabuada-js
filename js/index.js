@@ -11,48 +11,20 @@ numbers.forEach((number) => {
   })
 })
 
-operations.forEach( (op) => {
+operations.forEach((op) => {
   op.addEventListener("click", () => {
-    if(operation === null){
-      display.textContent += op.textContent;
-      if(operation !== "="){
-        operation = op.textContent;
-      }
+    let tabuada = ""; // Variável para armazenar todos os cálculos
+    for (let i = 1; i < 11; i++) {
+      var calc = i + " " + op.textContent + " " + display.textContent + " = " + eval(display.textContent + op.textContent + i);
+      tabuada += calc + "<br>"; // Adiciona cada cálculo à variável com quebra de linha em HTML
     }
-  }) 
-})
+    display.innerHTML = tabuada; // Atualiza o display com todos os cálculos
+  });
+});
 
-document.getElementById("equalsBtn").addEventListener("click", () => {
-    if(operation !== null){
-      let operationIndice = display.textContent.indexOf(operation);
-      let firstNumber = display.textContent.substring(0, operationIndice);
-      let lastNumber = display.textContent.substring(operationIndice + 1);
-      let resultado = 0;
 
-      switch (operation){
-        case '+':
-          console.log("Somou");
-          resultado = parseFloat(firstNumber) + parseFloat(lastNumber);
-          break;
 
-        case '-':
-          resultado = parseFloat(firstNumber) - parseFloat(lastNumber);
-          break;
 
-        case '*':
-          resultado = parseFloat(firstNumber) * parseFloat(lastNumber);
-          break;
-
-        case '/':
-          resultado = parseFloat(firstNumber) / parseFloat(lastNumber);
-          break;
-      }
-
-      display.textContent = resultado;
-      operation = null;
-      
-    }  
-})
 
 document.getElementById("clear")
     .addEventListener('click', () => {

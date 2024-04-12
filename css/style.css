@@ -20,8 +20,12 @@ main > div {
 }
 
 .rc-display {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background-color: #fff;
-  padding: 100px;
+  padding: 10px;
   color: black
 }
 
@@ -48,9 +52,11 @@ main > div {
   cursor: pointer;
 }
 
+/*
 #equalsBtn {
   background-color: greenyellow;
 }
+*/
 
 #clear {
   flex: 1;
