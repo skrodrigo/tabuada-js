@@ -32,6 +32,10 @@ operations.forEach(op => {
           break;
         case "/":
           resultado = num / i;
+          if (resultado % 1 !== 0) {
+            resultado = resultado.toFixed(2);
+          }
+            
           break;
       }
       tabuada += `${num} ${op.textContent} ${i} = ${resultado}<br>`;

@@ -6,6 +6,11 @@
             "src": "assets/tabuada.png",
             "type": "image/png",
             "sizes": "216x209"
+        },
+        {
+            "src": "assets/operations.png",
+            "type": "image/png",
+            "sizes": "512x512"
         }
     ],
     "start_url": "/index.html",
